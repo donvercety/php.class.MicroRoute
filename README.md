@@ -48,3 +48,9 @@ $r->run();
 RewriteEngine On
 RewriteRule ^(.*)$ index.php?p=/$1 [QSA,L]
 ```
+
+### one-liner
+```php
+<?php
+class Router{private $r=[];function add($r,callable$c){$this->r[$r]=$c;}function run(){$c=$this->r;isset($c[$_GET["p"]])?$c[$_GET["p"]]():$c[""]();}}
+```
