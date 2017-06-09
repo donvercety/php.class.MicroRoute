@@ -74,3 +74,9 @@ class Router
     }
 }
 ```
+
+use with php classes
+```php
+//      endpoint  class   method
+$r->add('/test', ["Test", "index"]);
+```
