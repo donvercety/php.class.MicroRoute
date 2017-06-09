@@ -79,4 +79,12 @@ use with php classes
 ```php
 //      endpoint  class   method
 $r->add('/test', ["Test", "index"]);
+
+class Test
+{
+    public function index()
+    {
+        echo 'class method';
+    }
+}
 ```
