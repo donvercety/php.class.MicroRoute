@@ -55,7 +55,7 @@ RewriteRule ^(.*)$ index.php?p=/$1 [QSA,L]
 class Router{private $r=[];function add($r,callable$c){$this->r[$r]=$c;}function run(){$c=$this->r;isset($c[$_GET["p"]])?$c[$_GET["p"]]():$c[""]();}}
 ```
 
-bigger, but no `.htaccess` file is needed
+use with php built-in web server - no `.htaccess` file is needed
 ```php
 class Router 
 {
